@@ -9,9 +9,10 @@ pipeline {
     stages {
 
         stage('Checkout') {
-            steps {
-                git 'https://github.com/Sagarmant/devops-project.git'
-            }
+    steps {
+        git branch: 'main', url: 'https://github.com/Sagarmant/devops-project.git'
+    }
+}
         }
 
         stage('Build Docker Image') {
